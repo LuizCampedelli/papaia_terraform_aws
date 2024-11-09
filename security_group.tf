@@ -49,8 +49,8 @@ resource "aws_vpc_security_group_egress_rule" "rds_sg" {
 }
 
 resource "aws_security_group" "lb_sg" {
-  name        = "papaia-lb_sg"
-  vpc_id      = aws_vpc.terra_vpc.id
+  name   = "papaia-lb_sg"
+  vpc_id = aws_vpc.terra_vpc.id
 
   tags = {
     Name = "papaia-lb_sg"
