@@ -1,5 +1,3 @@
-![AWS](imgs/AWS.drawio.png.png)
-
 # Ambiente Simulado: “E-commerce de Produtos Digitais”
 
 ## Descrição do Cenário:Imagine que você está revisando a arquitetura de um site de e-commerce que vende produtos digitais, como e-books e cursos online. O sistema é configurado para escalar automaticamente em períodos de alta demanda, como em campanhas de marketing e datas de promoção.
