@@ -7,7 +7,7 @@ resource "aws_rds_cluster" "db_terra_app" {
   allocated_storage         = 100
   iops                      = 3000
   master_username           = "root"
-  master_password           = "mustbeeightchars"
+  master_password           = random_password.password.result
   db_subnet_group_name      = aws_db_subnet_group.terra_db_subnet_group.name
   vpc_security_group_ids    = [aws_security_group.rds_sg.id]
 
@@ -15,20 +15,3 @@ resource "aws_rds_cluster" "db_terra_app" {
     Name = "terra_db_mysql"
   }
 }
-# resource "aws_db_instance" "terra_db_mysql" {
-#   identifier            = "terra_db_mysql"
-#   engine                = "mysql"
-#   instance_class        = "db.t3.micro"
-#   allocated_storage     = 20
-#   storage_type          = "io1"
-#   iops                  = 3000
-#   db_subnet_group_name  = aws_db_subnet_group.terra_db_subnet_group.name
-#   vpc_security_group_ids = [aws_security_group.rds_sg.id]
-#   publicly_accessible = false
-#   multi_az = true
-
-#   tags = {
-#     Name = "terra_db_mysql"
-#   }
-
-# }
