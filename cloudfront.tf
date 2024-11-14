@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "papaia_distribution" {
   }
 
   # Comportamento do cache para bucket S3
-  cache_behavior {
+  ordered_cache_behavior {
     path_pattern           = "/assets/*"  # Ajuste conforme necessário para o caminho S3
     target_origin_id       = "S3-papaia"
     viewer_protocol_policy = "allow-all" # Permite HTTP e HTTPS para S3
